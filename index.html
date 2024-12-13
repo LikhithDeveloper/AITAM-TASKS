@@ -1,3 +1,6 @@
+<!--Problem Statement: User Registration Form
+Design and implement a User Registration Form using HTML that collects personal details, preferences, and feedback from the user. The form must use various input types and elements to ensure proper data collection and provide a seamless experience. The task should demonstrate your understanding of HTML form elements, their attributes, and their functionality.-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +8,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <h1>Hi DEVARAJ</h1>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    <div style="width: 400px">
+      <fieldset>
+        <legend>AITAM-TASK-1</legend>
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label>First Name:</label>
+            <input type="text" placeholder="firstname" />
+            <br />
+            <br />
+            <label>Last Name:</label>
+            <input type="text" placeholder="lastname" />
+            <br />
+            <br />
+            <label>Email Address</label>
+            <input type="email" name="" id="" placeholder="abc@gmail.com" />
+            <br />
+            <br />
+            <label>Phone Number:</label>
+            <input type="number" name="" id="" placeholder="Phone" />
+            <br />
+            <br />
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="" id="" />
+            <br />
+            <br />
+            <label>Address:</label>
+            <textarea name="" id="" rows="2"></textarea>
+            <br />
+            <br />
+            <label for> Gender: </label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+            <br />
+            <br />
+            <input type="reset" value="Reset" />
+          </fieldset>
+          <br /><br />
+          <fieldset>
+            <legend>Feedback</legend>
+            <label>Rate the session:</label>
+            <br />
+
+            <input type="range" name="" id="" />
+            <br />
+            <br />
+            <label for> Rate the teaching: </label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">1</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">2</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">3</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">4</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">5</label>
+            <br />
+            <br />
+            <label for="">Best Part of todays session :</label>
+            <input type="" />
+            <br />
+            <br />
+            <label for="">Suggestion for upcoming session :</label>
+            <input type="" />
+
+            <p>Is there anything you'd like to share 👇:</p>
+            <textarea rows="4" cols="25" placeholder="Feedback"></textarea>
+            <br />
+            <input type="checkbox" name="" id="" /><label
+              >Accept the terms and conditions</label
+            >
+          </fieldset>
+          <button
+            type="submit"
+            style="margin-top: 15px; width: 200px; height: 30px"
+          >
+            Submit
+          </button>
+        </form>
+      </fieldset>
+    </div>
   </body>
 </html>
