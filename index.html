@@ -19,31 +19,37 @@ Design and implement a User Registration Form using HTML that collects personal 
     <div style="width: 400px">
       <fieldset>
         <legend>AITAM-TASK-1</legend>
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
           <fieldset>
             <legend>Personal Information</legend>
             <label>First Name:</label>
-            <input type="text" placeholder="firstname" />
+            <input type="text" placeholder="firstname" required />
             <br />
             <br />
             <label>Last Name:</label>
-            <input type="text" placeholder="lastname" />
+            <input type="text" placeholder="lastname" required />
             <br />
             <br />
             <label>Email Address</label>
-            <input type="email" name="" id="" placeholder="abc@gmail.com" />
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="abc@gmail.com"
+              required
+            />
             <br />
             <br />
             <label>Phone Number:</label>
-            <input type="number" name="" id="" placeholder="Phone" />
+            <input type="number" name="" id="" placeholder="Phone" required />
             <br />
             <br />
             <label for="dob">Date of Birth:</label>
-            <input type="date" name="" id="" />
+            <input type="date" name="" id="" required />
             <br />
             <br />
             <label>Address:</label>
-            <textarea name="" id="" rows="2"></textarea>
+            <textarea name="" id="" rows="2" required></textarea>
             <br />
             <br />
             <label for> Gender: </label>
@@ -53,6 +59,19 @@ Design and implement a User Registration Form using HTML that collects personal 
             <label for="female">Female</label>
             <br />
             <br />
+            <label for="">Username:</label>
+            <input type="text" name="" id="" required />
+            <br />
+            <br />
+            <label for="">Password:</label>
+            <input type="password" name="" id="" required />
+            <br />
+            <br />
+            <label for="">Conform Password:</label>
+            <input type="password" name="" id="" required />
+            <br />
+            <br />
+
             <input type="reset" value="Reset" />
           </fieldset>
           <br /><br />
@@ -85,7 +104,12 @@ Design and implement a User Registration Form using HTML that collects personal 
             <input type="" />
 
             <p>Is there anything you'd like to share 👇:</p>
-            <textarea rows="4" cols="25" placeholder="Feedback"></textarea>
+            <textarea
+              required
+              rows="4"
+              cols="25"
+              placeholder="Feedback"
+            ></textarea>
             <br />
             <input type="checkbox" name="" id="" /><label
               >Accept the terms and conditions</label
@@ -93,7 +117,7 @@ Design and implement a User Registration Form using HTML that collects personal 
           </fieldset>
           <button
             type="submit"
-            style="margin-top: 15px; width: 200px; height: 30px"
+            style="margin-top: 15px; width: 100%; height: 30px"
           >
             Submit
           </button>
