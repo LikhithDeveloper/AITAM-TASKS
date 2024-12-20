@@ -1,0 +1,130 @@
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  opacity: 0.9; /* Slightly adjusted for better opacity control */
+  backdrop-filter: blur(40px);
+  /* -webkit-backdrop-filter: blur(20px); Safari support */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Optional, if you want the navbar fixed at the top */
+  top: 0; /* Optional, for positioning if fixed */
+  z-index: 1000; /* Optional, ensures it's above other elements */
+  position: fixed;
+  z-index: 5;
+}
+
+.inner1 {
+  width: 10%;
+  height: 80%;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.inner1 h2 {
+  font-weight: 400;
+}
+
+.inner2 {
+  width: 30%;
+  height: 100%;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner2 a {
+  margin: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.inner2 a:hover {
+  color: white;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  background-color: #0e1833;
+  /* margin-top: 60px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.body h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 140px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.body p {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+  width: 790px;
+  color: rgba(255, 255, 255, 0.31);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-search {
+  width: 400px;
+  height: 80px;
+  /* background-color: red; */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.btn-search button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #38bdf8;
+}
+
+.btn-search input {
+  width: 230px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding-left: 20px;
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.141);
+  color: white;
+  margin-left: 27px;
+}
+span {
+  color: #38bdf8;
+}
+
+.btn-search input::placeholder {
+  color: rgba(255, 255, 255, 0.418);
+  font-size: 17px;
+}

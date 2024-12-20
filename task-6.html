@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 80%;
+        height: 50vh;
+        margin: auto;
+        background-color: lightgray;
+        border-radius: 10px;
+        padding: 20px;
+        transition: 1s;
+      }
+
+      .main h1 {
+        font-size: 2rem;
+      }
+      .main p {
+        font-size: 1.2rem;
+      }
+      button {
+        padding: 10px 45px;
+        background-color: rgba(65, 65, 231, 0.723);
+        border: none;
+        border-radius: 5px;
+        color: white;
+      }
+
+      .main:hover {
+        width: 90%;
+        height: 40vh;
+        animation-name: ani;
+        animation-duration: 1s; /* Added animation duration for a visible effect */
+        animation-iteration-count: 1;
+      }
+
+      @keyframes ani {
+        0% {
+          background-color: aliceblue;
+        }
+        10% {
+          background-color: rgb(33, 94, 148);
+          color: white;
+        }
+        20% {
+          background-color: rgb(105, 205, 11);
+          color: white;
+        }
+        30% {
+          background-color: rgb(63, 22, 211);
+          color: white;
+        }
+        40% {
+          background-color: rgb(2, 11, 19);
+          color: white;
+        }
+        50% {
+          background-color: rgb(201, 14, 14);
+        }
+        60% {
+          background-color: rgb(5, 56, 23);
+        }
+        70% {
+          background-color: rgb(176, 150, 178);
+        }
+        80% {
+          background-color: rgb(217, 224, 8);
+        }
+        90% {
+          background-color: rgb(123, 198, 19);
+        }
+        100% {
+          background-color: black;
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Hi This is Task 6</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit
+        expedita velit beatae voluptas harum dicta magni vero, at animi minus,
+        incidunt mollitia nam sunt veniam ex fugiat quaerat esse!
+      </p>
+      <button>Click to reduce</button>
+    </div>
+  </body>
+</html>
