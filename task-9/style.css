@@ -14,12 +14,12 @@
 }
 
 .conatiner {
-  /* width: 903px; */
-  height: 420px;
+  width: 903px;
+  height: 400px;
   background-color: transparent;
   display: grid;
-  grid-template-columns: repeat(4, 218px);
-  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   gap: 10px;
 }
 
