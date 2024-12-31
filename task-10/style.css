@@ -618,3 +618,9 @@ h2 {
   font-family: "Saira", serif;
   color: white;
 }
+
+.footer {
+  width: 100%;
+  background-color: #efefef;
+  padding: 70px 0;
+}
