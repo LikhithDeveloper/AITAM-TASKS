@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  background-color: transparent;
+  padding: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products {
+  /* padding: 10px 30px; */
+  background-color: rgba(110, 108, 108, 0.23);
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-grow: 2;
+  width: 450px;
+}
+
+.pro-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  background-color: transparent;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+}
+
+.pro-2 {
+  padding: 15px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.264); */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+hr {
+  width: 100%;
+}
