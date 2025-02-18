@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .invoice-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 40px;
+        background: white;
+        box-sizing: border-box;
+      }
+
+      .desktop-view {
+        display: block;
+      }
+
+      .mobile-view {
+        display: none;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .header-table td {
+        vertical-align: top;
+        padding-bottom: 30px;
+      }
+
+      .logo {
+        width: 100px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .quote-title {
+        text-align: right;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .quote-number {
+        text-align: right;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .company-name {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      .company-details {
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+        line-height: 1.4;
+      }
+
+      .main-table {
+        margin: 20px 0;
+      }
+
+      .main-table th {
+        background: #333;
+        color: white;
+        text-align: left;
+        padding: 12px 8px;
+      }
+
+      .main-table td {
+        padding: 12px 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .item-description {
+        color: #666;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+
+      .summary-table {
+        width: 40%;
+        margin-left: auto;
+      }
+
+      .summary-table td {
+        padding: 8px 0;
+      }
+
+      .amount {
+        text-align: right;
+      }
+
+      .total-row {
+        font-weight: 600;
+        background: #f5f5f5;
+      }
+
+      .total-words {
+        margin: 20px 0;
+        font-style: italic;
+      }
+
+      .notes-section {
+        margin-top: 40px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .feedback-link {
+        color: #1976d2;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice-container">
+      <!-- Desktop View -->
+      <div class="desktop-view">
+        <table class="header-table">
+          <tr>
+            <td style="width: 60%">
+              <img
+                src="https://krupacorp.com/logo-krupa.png"
+                alt="Logo"
+                class="logo"
+              />
+              <div class="company-name">OKstartups Valley Private Limited</div>
+              <div class="company-details">
+                Gurugram Haryana 122505<br />
+                GSTIN: 06AAECO3768N1ZW
+              </div>
+            </td>
+            <td>
+              <div class="quote-title">Quote</div>
+              <div class="quote-number">#EST-000010</div>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td style="width: 60%">
+              <div style="font-weight: bold; margin-bottom: 5px">Bill To</div>
+              <!-- <div>KRUPA RETAIL VENTURES PRIVATE LIMITED</div>
+              <div style="margin-top: 10px">Place Of Supply: Haryana (06)</div> -->
+              <pre>
+{{sales.billing_address}}
+              </pre>
+            </td>
+            <td style="text-align: right">Quote Date: {{sales.date}}</td>
+          </tr>
+        </table>
+
+        <table class="main-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Item & Description</th>
+              <th>HSN/SAC</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>CGST</th>
+              <th>SGST</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in items %}
+            <tr>
+              <td>1</td>
+              <td>
+                <!-- Professional Fees -->
+                <div>{{i.item_details}}</div>
+              </td>
+              <td>-</td>
+              <td>{{i.quantity}}</td>
+              <td>{{i.rate}}</td>
+              <td>-</td>
+              <td>-</td>
+              <td>{{i.amount}}</td>
+            </tr>
+            {% endfor %}
+            <!-- <tr>
+              <td>2</td>
+              <td>
+                Reimbursement
+                <div class="item-description">
+                  Government charges for FSSAI Application
+                </div>
+              </td>
+              <td>999799</td>
+              <td>1.00<br />Unit</td>
+              <td>2,000.00</td>
+              <td>-</td>
+              <td>-</td>
+              <td>2,000.00</td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <table class="summary-table">
+          <tr>
+            <td>Sub Total</td>
+            <td class="amount">{{sub_total}}</td>
+          </tr>
+          <tr>
+            <td>Shipping Charges</td>
+            <td class="amount">{{shipping_charges}}</td>
+          </tr>
+          <tr>
+            <td>Adjustment</td>
+            <td class="amount">{{adjustment}}</td>
+          </tr>
+          <tr class="total-row">
+            <td>Total</td>
+            <td class="amount">{{total}}</td>
+          </tr>
+        </table>
+
+        <div class="total-words">
+          Total in Words: Indian Rupee Four Thousand Nine Hundred Fifty Only
+        </div>
+
+        <div class="notes-section">
+          Notes<br />
+          Looking forward for your business.<br /><br />
+          A 5-star review from you would mean a lot to us!<br />
+          Please feel free to leave your feedback here:
+          <a href="https://bit.ly/okfeeds" class="feedback-link"
+            >https://bit.ly/okfeeds</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile View -->
+    </div>
+  </body>
+</html>
