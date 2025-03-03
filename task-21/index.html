@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input
+      type="text"
+      class="inp"
+      style="padding: 7px 15px"
+      placeholder="input"
+    /> -->
+    <div
+      class="container"
+      style="
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        cursor: pointer;
+      "
+    ></div>
+  </body>
+  <script>
+    // let inp = document.querySelector(".inp");
+    // inp.addEventListener("focus", () => {
+    //   alert("Input is focus");
+    // });
+    let container = document.querySelector(".container");
+    // container = document.addEventListener("keydown", (event) => {
+    //   console.log(event.keyCode);
+    // });
+    container.addEventListener("mouseover", (event) => {
+      console.log("HI");
+      container.style.background = "red";
+    });
+    container.addEventListener("mouseout", (event) => {
+      console.log("HI");
+      container.style.background = "yellow";
+    });
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="display: flex; width: 100px">
+    <button
+      class="btn-d"
+      style="margin: 20px; padding: 7px 15px"
+      onclick="Decrement()"
+    >
+      Decrement
+    </button>
+    <h2 class="counter">0</h2>
+    <button style="margin: 20px; padding: 7px 15px" onclick="Increment()">
+      Increment
+    </button>
+    <script>
+      let count = document.querySelector(".counter");
+      function Increment() {
+        let value = parseInt(count.textContent);
+        count.textContent = value + 1;
+      }
+      function Decrement() {
+        let value = parseInt(count.textContent);
+        if (value <= 0) {
+          alert("Button disabled");
+          document.querySelector(".btn-d").setAttribute("disable");
+        }
+        count.textContent = value - 1;
+      }
+    </script>
+  </body>
+</html>

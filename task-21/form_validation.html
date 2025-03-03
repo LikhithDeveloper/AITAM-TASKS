@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="basicForm">
+      <label>
+        Name: <input type="text" id="name" placeholder="Enter your name" />
+      </label>
+      <br />
+      <label>
+        Email: <input type="email" id="email" placeholder="Enter your email" />
+      </label>
+      <br />
+      <label>
+        Password:
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+      </label>
+      <br />
+      <input type="checkbox" name="" id="terms" />
+      <label>Accept Trems and condition</label>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      const form = document.getElementById("basicForm");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const terms = document.getElementById("terms").checked;
+
+        // console.log(name, email);
+
+        if (name === "") {
+          alert("Please enter your name");
+          return;
+        }
+        if (!email.match(/^\S+@\S+\.\S+$/)) {
+          alert("Please enter your email");
+          return;
+        }
+        if (password.length < 8) {
+          alert("Please enter your password of length greater than 8");
+          return;
+        }
+        if (terms === false) {
+          alert("Accept the terms and conditions");
+          return;
+        }
+        alert(`Form has been submitted successfully`);
+      });
+    </script>
+     
+  </body>
+</html>

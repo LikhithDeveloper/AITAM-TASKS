@@ -15,13 +15,14 @@ document.getElementById("to-do").addEventListener("submit", (e) => {
     // console.log("hi0");
     delall.style.display = "block";
   }
+  task.value = "";
+  date.value = "";
 });
 
 function deletetask(e) {
   e.target.parentElement.remove();
 }
 
-// console.log(list.innerHTML);
 let delall = document.querySelector(".dlt-all");
 delall.style.display = "none";
 
